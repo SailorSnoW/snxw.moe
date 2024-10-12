@@ -1,0 +1,24 @@
+---
+import '../styles/global.css'
+import Footer from '../components/molecules/Footer.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="og:title" content="snxw.moe" />
+		<meta content="/default.png" property="og:image" />
+		<meta property="og:description" content="the only website ever" />
+		<meta name="twitter:image" itemprop="image" content="/default.png" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="theme-color" content="#C6A0F6" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>snxw</title>
+	</head>
+	<body class="bg-bg-color">
+		<slot />
+		<Footer />
+	</body>
+</html>

@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----- Custom Styles ----- */
+
+@layer base {
+    @font-face {
+        font-display: swap;
+        font-family: "Space Grotesk";
+        font-style: normal;
+        font-weight: 300;
+        src: url("../../../../fonts/space-grotesk-v15-latin-300.woff2") format("woff2"),
+          url("../../../../fonts/space-grotesk-v15-latin-300.woff") format("woff");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: "Space Grotesk";
+        font-style: normal;
+        font-weight: 400;
+        src: url("../../../../fonts/space-grotesk-v15-latin-regular.woff2") format("woff2"),
+          url("../../../../fonts/space-grotesk-v15-latin-regular.woff") format("woff");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: "Space Grotesk";
+        font-style: normal;
+        font-weight: 500;
+        src: url("../../../../fonts/space-grotesk-v15-latin-500.woff2") format("woff2"),
+          url("../../../../fonts/space-grotesk-v15-latin-500.woff") format("woff");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: "Space Grotesk";
+        font-style: normal;
+        font-weight: 600;
+        src: url("../../../../fonts/space-grotesk-v15-latin-600.woff2") format("woff2"),
+          url("../../../../fonts/space-grotesk-v15-latin-600.woff") format("woff");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: "Space Grotesk";
+        font-style: normal;
+        font-weight: 700;
+        src: url("../../../../fonts/space-grotesk-v15-latin-700.woff2") format("woff2"),
+          url("../../../../fonts/space-grotesk-v15-latin-700.woff") format("woff");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 300;
+        src: url("../../../../fonts/jetbrains-mono-v18-latin-300.woff2") format("woff2"),
+          url("../../../../fonts/jetbrains-mono-v18-latin-300.woff") format("woff");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 400;
+        src: url("../../../../fonts/jetbrains-mono-v18-latin-regular.woff2") format("woff2"),
+          url("../../../../fonts/jetbrains-mono-v18-latin-regular.woff") format("woff");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 500;
+        src: url("../../../../fonts/jetbrains-mono-v18-latin-500.woff2") format("woff2"),
+          url("../../../../fonts/jetbrains-mono-v18-latin-500.woff") format("woff");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 600;
+        src: url("../../../../fonts/jetbrains-mono-v18-latin-600.woff2") format("woff2"),
+          url("../../../../fonts/jetbrains-mono-v18-latin-600.woff") format("woff");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 700;
+        src: url("../../../../fonts/jetbrains-mono-v18-latin-700.woff2") format("woff2"),
+          url("../../../../fonts/jetbrains-mono-v18-latin-700.woff") format("woff");
+      }
+
+  /* Reset default styles */
+  * {
+    @apply box-border m-0 p-0 scroll-smooth scroll-mt-4 lg:scroll-mt-24 font-font-one;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  html {
+    @apply box-border tracking-tighter overflow-x-hidden;
+  }
+
+  body {
+    @apply m-0 p-0 leading-normal bg-bg-color overflow-x-hidden;
+  }
+
+  .wrapper {
+    @apply min-h-0 m-auto mb-20 lg:mb-0 w-11/12 md:w-9/12;
+  }
+
+  body.stop-transitions * {
+    @apply transition-none;
+  }
+
+  /* Variable CSS */
+  :root {
+    --bezier-one: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Selection Style */
+  ::selection {
+    @apply bg-accent-opacity;
+  }
+
+  /* ----- Headings ----- */
+  h1 {
+    @apply text-text-primary font-semibold tracking-[-0.075em] leading-[101.6%] text-8xl;
+  }
+  h2 {
+    @apply text-text-primary font-medium text-3xl lg:text-4xl w-fit text-left rounded-xl mb-1 lg:mb-0;
+  }
+  h3 {
+    @apply text-text-primary font-medium text-xl lg:text-xl;
+  }
+  h4 {
+    @apply text-text-secondary font-light text-[1.6rem];
+  }
+  h5 {
+    @apply text-text-secondary text-base lg:text-lg font-light tracking-[-0.075em] font-font-two;
+  }
+  h6 {
+    @apply text-text-secondary text-[0.9rem] font-light tracking-[-0.075em] font-font-two;
+  }
+  p {
+    @apply text-text-secondary font-light text-base lg:text-lg tracking-[-0rem] leading-7;
+  }
+
+  /* ----- Scrollbar ----- */
+  ::-webkit-scrollbar {
+    width: 11px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--elevation-three);
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--elevation-one);
+  }
+}

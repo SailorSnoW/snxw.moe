@@ -1,0 +1,13 @@
+---
+import OutlineText from '../atoms/OutlineText.astro';
+import RepoCards from '../molecules/Repo.svelte';
+---
+
+<section class="wrapper" id="code">
+	<div class="title flex justify-left lg:justify-center mt-0">
+		<h2 class="inline-block mb-4"><span class="text-accent">dev</span>:work</h2>
+	</div>
+    <OutlineText content="λ" translateX="1150%" translateY="-30%">
+        <RepoCards client:load />
+    </OutlineText>
+</section>

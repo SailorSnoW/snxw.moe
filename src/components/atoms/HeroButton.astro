@@ -1,0 +1,29 @@
+---
+---
+
+<button data-hero-button
+	class="font-font-two flex relative flex-row justify-center text-center cursor-pointer bg-elevation-one select-none text-accent font-light text-sm lg:text-lg tracking-[-0.075em] border border-elevation-four m-0 px-8 py-4 lg:pl-12 rounded-2xl border-solid active:scale-[95%] hover:brightness-[110%] "
+>    
+    <div class="hidden lg:block absolute content-[''] h-full w-[1.6rem] bg-accent rounded-[16px_0_0_16px] left-0 top-0" />
+    Discover my work ↓
+</button>
+
+<script>
+    // Find our component DOM on the page.
+    const buttons = document.querySelectorAll('[data-hero-button]');
+  
+    // Add event listeners to fire confetti when a button is clicked.
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const el = document.querySelector('#code');
+		if (!el) return;
+		el.scrollIntoView(true);
+      });
+    });
+  </script>
+
+<style>
+	button {
+		transition: filter 0.2s var(--bezier-one), transform 0.5s var(--bezier-one);
+	}
+</style>

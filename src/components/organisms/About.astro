@@ -1,0 +1,29 @@
+---
+import RichPresence from '../molecules/RichPresence.svelte';
+import AgeTooltip from '../atoms/AgeTooltip.svelte';
+import OutlineText from '../atoms/OutlineText.astro';
+---
+
+<section id="about" class="wrapper flex flex-col lg:grid lg:grid-cols-[1fr_1fr] lg:items-center gap-16 mb-12 lg:mb-24">
+	<div>
+		<RichPresence client:load />
+	</div>
+	<div class="text relative leading-8">
+		<h2 class="block lg:hidden  mb-4 lg:mt-4">bio</h2>
+        <OutlineText content="sno" translateX="97%" translateY="-5%" fontSize="330px" opacity="0.22">
+            <p>
+                Hey there, I'm SnoW!  :] I'm a <AgeTooltip client:load />
+                full-stack developer, actually with a focus on blockchain, mainly using <span>Rust</span> and Substrate. 
+                I’ve also got experience in <span>C#</span>, <span>Elixir</span>, and some front-end too.
+                I'm also into Linux, sysadmin tasks, networking, and Docker. I love self-hosting servers and experimenting with different tech stacks. 
+                If you're into software, blockchain, or server tinkering, stick around!
+            </p>
+        </OutlineText>
+	</div>
+</section>
+
+<style>
+	span {
+        @apply font-normal text-[0.9rem] bg-elevation-one text-accent w-fit px-2 py-[0.2rem] rounded-[7px];
+	}
+</style>
