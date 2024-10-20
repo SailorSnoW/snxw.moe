@@ -1,0 +1,14 @@
+---
+const { href, name } = Astro.props;
+---
+
+<li class="no-underline list-none">
+    <a href={href} class="bg-transparent text-text-secondary text-base select-none flex items-center gap-3 cursor-pointer px-6 py-3 rounded-3xl border-none hover:bg-elevation-one">
+        <div class="hidden">
+			<slot/>
+		</div>
+        <h5 class="transition-all duration-300 ease-[var(--bezier-one)] opacity-80" >
+			{name}
+		</h5>
+    </a>
+</li>
