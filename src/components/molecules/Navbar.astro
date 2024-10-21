@@ -5,14 +5,14 @@ import Nav from '../atoms/Nav.astro';
 
 <div class="flex justify-center">
     <StickyHeader 
-    class="fixed z-20 rounded-xl backdrop-blur-lg bg-blend-overlay transition-all duration-500 ease-in-out px-0 py-5 top-0" 
+    class="fixed z-20 rounded-xl backdrop-blur-lg bg-blend-overlay transition-all duration-500 ease-in-out top-0" 
     scrollY={20} 
     defaultClass="w-full lg:w-[40rem]"
-    activeClass="w-[34rem] mt-2 px-0 py-2 bg-opacity-80 bg-elevation-one border-b-4 border-b-accent-opacity border-solid shadow-[0px_15px_8px_-10px_rgba(0,0,0,0.4)]"
+    activeClass="w-[34rem] mt-2 px-0 py-2 bg-opacity-80 bg-elevation-two border-b-4 border-b-accent-opacity border-solid drop-shadow-lg"
     >
         <Astronav>
           <MenuItems>
-            <ul class="flex gap-16 justify-center" >
+            <ul class="flex gap-16 justify-center transitio" >
               <Nav href="#home" name="< / >" />
               <Nav href="#about" name="about" />
               <Nav href="#code" name="work" />
