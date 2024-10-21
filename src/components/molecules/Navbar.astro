@@ -5,17 +5,52 @@ import Nav from '../atoms/Nav.astro';
 
 <div class="flex justify-center">
     <StickyHeader 
-    class="fixed z-20 rounded-xl backdrop-blur-lg bg-blend-overlay transition-all duration-500 ease-in-out top-0" 
+    class="fixed z-20 w-full lg:rounded-xl backdrop-blur-lg bg-bg-color bg-blend-overlay lg:border-b-accent-opacity transition-all duration-500 ease-in-out bottom-0 top-auto lg:top-0 lg:bottom-auto" 
     scrollY={20} 
-    defaultClass="w-full lg:w-[40rem]"
-    activeClass="w-[34rem] mt-2 px-0 py-2 bg-opacity-80 bg-elevation-two border-b-4 border-b-accent-opacity border-solid drop-shadow-lg"
+    defaultClass="lg:w-[40rem]"
+    activeClass="lg:w-[34rem] lg:mt-2 lg:px-0 lg:py-2 lg:bg-elevation-one lg:bg-opacity-80 lg:border-b-4 lg:border-solid lg:drop-shadow-lg"
     >
         <Astronav>
           <MenuItems>
-            <ul class="flex gap-16 justify-center transitio" >
-              <Nav href="#home" name="< / >" />
-              <Nav href="#about" name="about" />
-              <Nav href="#code" name="work" />
+            <ul class="flex lg:gap-16 justify-evenly lg:justify-center" >
+              <Nav href="#home" name="< / >" >
+                <svg
+                    class="fill-text-secondary"
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					><path fill="none" d="M0 0h24v24H0z" /><path
+						d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+					/></svg
+				>
+              </Nav>
+              <Nav href="#about" name="about" >
+                <svg
+                    class="fill-text-secondary"
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					fill="var(--accent)"
+					viewBox="0 0 24 24"
+					><path fill="none" d="M0 0h24v24H0z" /><path
+						d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+					/></svg
+				>
+              </Nav>
+              <Nav href="#code" name="work" >
+                <svg
+                    class="fill-text-secondary"
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					fill="var(--accent)"
+					viewBox="0 0 24 24"
+					><path fill="none" d="M0 0h24v24H0z" /><path
+						d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+					/></svg
+				>
+              </Nav>
             </ul>
           </MenuItems>
         </Astronav>
